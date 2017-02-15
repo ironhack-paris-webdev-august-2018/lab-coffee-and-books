@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps | Express</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+		<h3>Add new place</h3>
+		<form method="POST" action="/">
+			<label>Name:</label>
+			<input type="" name="name" placeholder="Name">
+			<label>Description:</label>
+			<input type="" name="description" placeholder="Description">
+      <label>Kind of Establishment:</label>
+			<select name="kindOfEst" placeholder="Kind of Establishment">
+        <option value="Coffee">Coffee</option>
+        <option value="Books">Books</option>
+      </select>
+      <label>Address</label>
+      <input id="latitude" type="text" name="latitude" placeholder="Latitude" readonly="readonly">
+      <input id="longitude" type="text" name="longitude" placeholder="Longitude" readonly="readonly">
+
+			<input type="submit" name="" value="Save place">
+		</form>
+    <div id="map"></div>
+  </body>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7WVwmVKFMWOnLdmiUIhveGGkB0ZLPfBI"></script>
+		<script type="text/javascript" src="/javascripts/new.js"></script>
+
+</html>

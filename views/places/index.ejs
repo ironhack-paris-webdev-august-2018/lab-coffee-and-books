@@ -9,26 +9,27 @@
       <h1> Places for Music, drinks and food lovers</h1>
       <div class="info">
         <h3>Current Places</h3>
-
         <ul>
-          <% restaurants.forEach((restaurant) => { %>
+          <% places.forEach((place) => { %>
             <li>
-              <a href="/<%= restaurant._id%>">
-                <%= restaurant.name%> | <%= restaurant.description %>
-              </a>
+              <a href="/<%= place._id%>">
+                <%= place.name%> | <%= place.description %></a>
+              <%= place.kindOfEstablishment%>
                |
-              <a href="/<%= restaurant._id%>/edit">Edit</a>
+              <a href="/<%= place._id%>/edit">Edit</a>
                |
-              <a href="/<%= restaurant._id%>/delete">Delete</a>
+              <a href="/<%= place._id%>/delete">Delete</a>
             </li>
           <% }) %>
         </ul>
-        <a href="/new">Create new restaurant</a>
+        <a href="/new">Create new place</a>
       </div>
     </div>
   </body>
+  <div id="map"></div>
+
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbBJPvYIaR5ozIx_0-uWiGeO9cK4IxHww">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7WVwmVKFMWOnLdmiUIhveGGkB0ZLPfBI">
   </script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/javascripts/main.js"></script>

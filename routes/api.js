@@ -1,28 +1,28 @@
 const express = require('express');
 const router = express.Router();
-const Restaurant = require('../models/restaurant');
+const Place = require('../models/place');
 
-router.route('/')
+router.route('/api')
 	.get((req, res) => {
-	  Restaurant.find((error, restaurants) => {
+	  Place.find((error, places) => {
 	  	if (error) {
 	  		res.status(500).json({message: error});
 	  	} else {
-	  		res.status(200).json(restaurants);
+	  		res.status(200).json(places);
 	  	}
-	  })
+	  });
 	});
 
 
-router.route('/:restaurant_id')
+router.route('/api/:place_id')
 	.get((req, res) => {
-		Restaurant.findById(req.params.restaurant_id, (error, restaurant) => {
+		Place.findById(req.params.place_id, (error, place) => {
 			if (error) {
 				res.status(500).json({message: error});
 			} else {
-				res.status(200).json(restaurant);
+				res.status(200).json(place);
 			}
-		})
+		});
 	});
 
 
